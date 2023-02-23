@@ -16,6 +16,7 @@ body {
 h1, h2, h3 {
     font-family: 'Yeseva One', cursive;
     margin: 1rem;
+    padding: 0.3rem;
     text-align: center;
     color: #22223b;
 }
@@ -41,6 +42,7 @@ h1:hover, h2:hover {
 h3 {
     background-color: #9a8c98;
     color: white;
+    border-radius: 0.3rem;
 }
 
 h3:hover {
@@ -76,6 +78,7 @@ p {
     text-align: justify;
     background-color: white;
     border: #c9ada7 solid;
+    border-radius: 0.3rem;
 }
 
 #grid-floats {
@@ -96,6 +99,7 @@ p {
     align-content: stretch;
     gap: 0.33rem;
     max-width: 639px;
+    width: 100%;
 }
 
 #grid-flex li:first-child {
@@ -104,21 +108,17 @@ p {
 }
 
 #grid-flex > .grid-item {
-    width: calc(100% - 50% - 1.32rem);
+    width: calc(50% - 1.47rem);
 }
 
-    /*
+li:first-child h3 {
+    color:#7f737d;
+    background-color: white;
+}
 
-    li:first-child > h3 {
-        font-size: 30px;
-    }
-
-    li:first-child > p {
-        font-size: 25px;
-        color: #7f737d;
-    }
-
-    */
+li:first-child p {
+    color: #7f737d;
+}
 
 /*------MEDIUM SCREEN-------*/
 
@@ -334,6 +334,3 @@ p {
         margin-right: calc(100% - 75% + 0.33rem);
     }
 }
-
-
-
