@@ -153,19 +153,19 @@ h1 {
 }
 
 .img-scroll div:first-child {
-    background-image: url(../images/img-highlight-1.jpeg);
+    background-image: url("./images/img-highlight-1.jpeg");
 }
 
 .img-scroll div:nth-child(2) {
-    background-image: url(../images/img-highlight-2.jpeg);
+    background-image: url("./images/img-highlight-2.jpeg");
 }
 
 .img-scroll div:nth-child(3) {
-    background-image: url(../images/img-highlight-3.jpeg);
+    background-image: url("./images/img-highlight-3.jpeg");
 }
 
 .img-scroll div:nth-child(4) {
-    background-image: url(../images/img-highlight-4.jpeg);
+    background-image: url("./images/img-highlight-4.jpeg");
 }
 
 .img-scroll-text {
@@ -180,7 +180,7 @@ h1 {
     align-content: center;
     width: 98%;
     height: auto;
-    background-image: url(../images/img-highlight-5.jpg);
+    background-image: url("./images/img-highlight-5.jpg");
     background-size: cover;
     background-position: center;
     color: rgb(255, 255, 255);
