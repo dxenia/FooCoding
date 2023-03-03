@@ -767,13 +767,13 @@ footer {
     }
 
     .highlights-container div:first-child {
-        background-image: url("./images/img-highlight-1.jpeg");
+        background-image: url("../images/img-highlight-1.jpeg");
         width: 97%;
         height: 24.6rem;
     }
     
     .highlights-container div:nth-child(2) {
-        background-image: url("./images/img-highlight-2.jpeg");
+        background-image: url("../images/img-highlight-2.jpeg");
         width: 61%;
         height: 12rem;
     }
@@ -791,7 +791,7 @@ footer {
     }
 
     .highlights-container div:nth-child(5) {
-        background-image: url("./images/img-highlight-5.jpg");
+        background-image: url("../images/img-highlight-5.jpg");
         width: 60%;
         height: 14rem;
         display: flex;
@@ -1169,7 +1169,7 @@ footer {
     }
 
     .highlights-container div:first-child {
-        background-image: url("./images/img-highlight-1.jpeg");
+        background-image: url("../images/img-highlight-1.jpeg");
         grid-column: 1 / 3;
         grid-row: 1 / 4;
         width: 100%;
@@ -1177,7 +1177,7 @@ footer {
     }
     
     .highlights-container div:nth-child(2) {
-        background-image: url("./images/img-highlight-2.jpeg");
+        background-image: url("../images/img-highlight-2.jpeg");
         grid-column: 3 / 4;
         grid-row: 1 / 3;
         width: 100%;
@@ -1186,7 +1186,7 @@ footer {
     }
     
     .highlights-container div:nth-child(3) {
-        background-image: url("./images/img-highlight-4.jpeg");
+        background-image: url("../images/img-highlight-4.jpeg");
         grid-column: 3 / 5;
         grid-row: 3 / 6;
         width: 100%;
@@ -1194,7 +1194,7 @@ footer {
     }
     
     .highlights-container div:nth-child(4) {
-        background-image: url("./images/img-highlight-3.jpeg");
+        background-image: url("../images/img-highlight-3.jpeg");
         grid-column: 4 / 5;
         grid-row: 1 / 3;
         width: 100%;
@@ -1202,7 +1202,7 @@ footer {
     }
 
     .highlights-container div:nth-child(5) {
-        background-image: url("./images/img-highlight-5.jpg");
+        background-image: url("../images/img-highlight-5.jpg");
         grid-column: 1 / 3;
         grid-row: 4 / 6;
         width: 100%;
