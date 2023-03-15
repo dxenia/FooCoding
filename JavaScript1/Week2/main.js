@@ -157,4 +157,4 @@ if (infinityOne === infinityTwo) {
   console.log("Infinites cannot be compared.")
 }
 
-console.log("As the statements returns true, two infinities can be compared.")
+console.log("According to our results, two infinities can be compared.")
