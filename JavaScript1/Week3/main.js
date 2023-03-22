@@ -66,11 +66,11 @@ printObjectProperties(danaObject);
 // 4. Create a function named vehicleType that receives a color, and a code, 1 for car, 2 for motorbike. And prints 'a blue motorbike' for example when called as vehicleType("blue", 2)
 
 
-function vehicleType(color, type) {
-  if (type === 1) {
-    return `a ${color} car`
-  } else if (type === 2) {
-    return `a ${color} motorbike`
+function vehicleType(color, code) {
+  if (code === 1) {
+    return `a ${color} car`;
+  } else if (code === 2) {
+    return `a ${color} motorbike`;
   }
 }
 
@@ -92,7 +92,8 @@ console.log(3 === 3 ? "yes" : "no");
 let someVehicles = ["motorbike", "caravan", "bike", "airplane", "scooter"];
 console.log(someVehicles);
 // 8. How do you get the third element from that list?
-console.log(someVehicles[2]); 
+let thirdElement = someVehicles[2];
+console.log(thirdElement); 
 
 // 6. Create a function called vehicle, like before, but takes another parameter called age, so that vehicle("blue", 1, 5) prints 'a blue used car'.
 // and
@@ -105,12 +106,12 @@ function vehicle(color, code, age) {
   } else if (age > 1) {
     age = "used";
   }
-  return `a ${color} ${age} ${code}`
+  return `a ${color} ${age} ${code}`;
 }
 
 vehicle("blue", 1, 5);
 vehicle("red", 2, 5);
-vehicle("green", 3, 1)
+vehicle("green", 3, 1);
 
 // 10. Use the list of vehicles to write an advertisement. So that it prints something like: "Amazing Joe's Garage, we service cars, motorbikes, caravans and bikes.". (Hint: use a for loop.)
 
@@ -146,7 +147,7 @@ let myTeachers = {
   firstModuleTeacher: "Tommy",
   secondModuleTeacher: "Sahin",
   languages: "HTML, CSS, JavaScript"
-};
+}
 
 // 15. Write some code to test two arrays for equality using == and ===. Test the following:
 
@@ -165,7 +166,7 @@ console.log(z == y) // true
 console.log("I think that z == x will return: false")
 console.log(z == x) // false
 
-// However, note that results are different when using JSON.stringify(array) to test primitive values within the array.
+// However, note that results are different when using JSON.stringify(array) to compare primitive values within the array.
 
 console.log(JSON.stringify(x) === JSON.stringify(y)); // true
 console.log(JSON.stringify(x) == JSON.stringify(y)); // true
@@ -179,7 +180,7 @@ let o3 = o2;
 // Show that changing o2 changes o3 (or not) and changing o1 changes o3(or not). Does the order that you assign (o3 = o2 or o2 = o3) matter?
 
 o2 = { foo: "restaurant"};
-o1 = { foo: "cafe" }
+o1 = { foo: "cafe" };
 console.log(o2);
 console.log(o3);
 console.log("Changing o2 does not change o3, because the computer reads the code from top to bottom. Changing o1 has no effect on o3. The order that you assign a object does not matter.")
