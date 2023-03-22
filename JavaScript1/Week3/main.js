@@ -102,7 +102,7 @@ console.log(thirdElement);
 
 function vehicle(color, code, age) {
   if (code <= 0 || typeof code !== "number") {
-    return "The code is invalid"
+    return "The code is invalid";
   } 
   code = someVehicles[code - 1];
   if (age <= 1) {
@@ -139,7 +139,7 @@ console.log(advertisement);
 // 11. What if you add one more vehicle to the list, can you have that added to the advertisement without changing the code for question 10?
 
 someVehicles.push("tricycle");
-console.log(advertisement); // In this specific case, the order of the placement of "someVehicles.push("tricycle");" matters within the code. 
+console.log(advertisement); // In this specific case, the placement of "someVehicles.push("tricycle");" matters within the code. 
 
 // 12. Create an empty object.
 
@@ -191,7 +191,7 @@ let o3 = o2;
 // Show that changing o2 changes o3 (or not) and changing o1 changes o3(or not). Does the order that you assign (o3 = o2 or o2 = o3) matter?
 
 o2.foo = "wine";
-o1.foo = "water"
+o1.foo = "water";
 console.log(o1); // { foo: 'water' }
 console.log(o2); // { foo: 'wine' }
 console.log(o3); // { foo: 'wine' }
