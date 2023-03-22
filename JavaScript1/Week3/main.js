@@ -23,7 +23,7 @@ favoriteAnimals.splice(3, 1);
 console.log(favoriteAnimals);
 
 // To find the index of an item in an array you can use "indexOf("item")" as suggested below:
-favoriteAnimals.indexOf("meerkat")
+favoriteAnimals.indexOf("meerkat");
 console.log("The item you are looking for is at index: " + favoriteAnimals.indexOf("meerkat"));
 
 // MORE JAVASCRIPT!
@@ -44,7 +44,7 @@ function colorCar(color) {
 }
 
 colorCar("blue");
-colorCar("pink")
+colorCar("pink");
 
 // 3. Create an object and a function that takes the object as a parameter and prints out all of its properties and values.
 
@@ -57,7 +57,7 @@ const danaObject = {
 
 function printObjectProperties(object) {
     for (property in object) {
-      console.log(property + ": " + object[property])
+      console.log(property + ": " + object[property]);
     }
 }
 
@@ -91,6 +91,7 @@ console.log(3 === 3 ? "yes" : "no");
 // 7. Make a list of vehicles, you can add "motorbike", "caravan", "bike", or more.
 let someVehicles = ["motorbike", "caravan", "bike", "airplane", "scooter"];
 console.log(someVehicles);
+
 // 8. How do you get the third element from that list?
 let thirdElement = someVehicles[2];
 console.log(thirdElement); 
@@ -100,6 +101,9 @@ console.log(thirdElement);
 // 9. Change the function vehicle to use the list of question 7. So that vehicle("green", 3, 1) prints "a green new bike".
 
 function vehicle(color, code, age) {
+  if (code <= 0 || typeof code !== "number") {
+    return "The code is invalid"
+  } 
   code = someVehicles[code - 1];
   if (age <= 1) {
     age = "new";
@@ -115,6 +119,7 @@ vehicle("green", 3, 1);
 
 // 10. Use the list of vehicles to write an advertisement. So that it prints something like: "Amazing Joe's Garage, we service cars, motorbikes, caravans and bikes.". (Hint: use a for loop.)
 
+ 
 let advertisement = "Amazing Joe's Garage, we service ";
 
 for (let i = 0; i < someVehicles.length; i++) {
@@ -133,7 +138,8 @@ console.log(advertisement);
 
 // 11. What if you add one more vehicle to the list, can you have that added to the advertisement without changing the code for question 10?
 
-console.log("If we wanted to add one more vehicle to the list, we would need to change the code for the question 10 by adding one more element to the array first, and then logging the advertisement we obtained through the for loop")
+someVehicles.push("tricycle");
+console.log(advertisement); // In this specific case, the order of the placement of "someVehicles.push("tricycle");" matters within the code. 
 
 // 12. Create an empty object.
 
@@ -157,16 +163,17 @@ let z = y;
 
 // What do you think will happen with x == y, x === y and z == y and z == x? Prove it!
 
-console.log("I think that x == y will return: true")
-console.log(x == y) // false
-console.log("I think that x === y will return: true")
-console.log(x === y) // false
-console.log("I think that z == y will return: true")
-console.log(z == y) // true
-console.log("I think that z == x will return: false")
-console.log(z == x) // false
+console.log("x == y will return: false")
+console.log(x == y) // first guess: true
+console.log("x === y will return: false")
+console.log(x === y) // first guess: true
+console.log("z == y will return: true")
+console.log(z == y) // first guess: true
+console.log("z == x will return: false")
+console.log(z == x) // first guess: false
 
-// However, note that results are different when using JSON.stringify(array) to compare primitive values within the array.
+// Composite data types that are compared with == and === as always return false (and cannot be accurately compared either).
+// However, note that results are different when using JSON.stringify(array) to compare primitive values within the arrays.
 
 console.log(JSON.stringify(x) === JSON.stringify(y)); // true
 console.log(JSON.stringify(x) == JSON.stringify(y)); // true
@@ -179,11 +186,12 @@ let o3 = o2;
 
 // Show that changing o2 changes o3 (or not) and changing o1 changes o3(or not). Does the order that you assign (o3 = o2 or o2 = o3) matter?
 
-o2 = { foo: "restaurant"};
-o1 = { foo: "cafe" };
-console.log(o2);
-console.log(o3);
-console.log("Changing o2 does not change o3, because the computer reads the code from top to bottom. Changing o1 has no effect on o3. The order that you assign a object does not matter.")
+o2.foo = "wine";
+o1.foo = "water"
+console.log(o1); // { foo: 'water' }
+console.log(o2); // { foo: 'wine' }
+console.log(o3); // { foo: 'wine' }
+console.log("Changing o2 does change o3. Changing o1 has no effect on o3. The order that you assign a object does not matter.")
 
 // 17. What does the following code return? (And why?)
 
