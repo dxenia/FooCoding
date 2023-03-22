@@ -176,7 +176,7 @@ console.log(z == y) // first guess: true
 console.log("z == x will return: false")
 console.log(z == x) // first guess: false
 
-// Composite data types that are compared with == and === as always return false (and cannot be accurately compared either).
+// Composite data types that are compared with == and === always return false (and cannot be accurately compared either).
 // However, note that results are different when using JSON.stringify(array) to compare primitive values within the arrays.
 
 console.log(JSON.stringify(x) === JSON.stringify(y)); // true
