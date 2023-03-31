@@ -152,16 +152,17 @@ function createList() {
       li.appendChild(h4);
       h4.innerHTML = `Language: ${item.language}`;
   
-      displayCover(li, bookCovers[key])
+      displayCover(li, bookCovers[key], bookData[key].title);
     }    
   }
 };
 
 createList();
 
-function displayCover(book, id) {
+function displayCover(book, id, alt) {
   const img = document.createElement("img");
   book.appendChild(img);
   img.src = id;
+  img.alt = alt;
 }
   
