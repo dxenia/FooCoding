@@ -144,13 +144,13 @@ function createList() {
       li.appendChild(h2);
       h2.innerHTML = `"${item.title}"`;
 
-      const h3 = document.createElement("h4");
-      li.appendChild(h3);
-      h3.innerHTML = `Author: ${item.author}`;
+      const authorInfo = document.createElement("h3");
+      li.appendChild(authorInfo);
+      authorInfo.innerHTML = `By: ${item.author}`;
       
-      const h4 = document.createElement("h4");
-      li.appendChild(h4);
-      h4.innerHTML = `Language: ${item.language}`;
+      const languageInfo = document.createElement("h3");
+      li.appendChild(languageInfo);
+      languageInfo.innerHTML = `Language: ${item.language}`;
   
       displayCover(li, bookCovers[key], bookData[key].title);
     }    
