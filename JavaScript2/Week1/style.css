@@ -18,13 +18,21 @@ h1 {
   font-family: 'DM Serif Text', serif;
   text-align: center;
   color: rgb(220, 237, 215);
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin: 1rem;
 }
 
-h2, h3, h4 {
+h2, h3 {
   font-family: 'DM Mono', monospace;
   font-weight: 400;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.1rem;
 }
 
 ul {
@@ -33,6 +41,22 @@ ul {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 1rem;
+    margin: 1rem;
+    padding: 3rem;
+}
+
+li {
+    text-align: center;
+    border: solid 0.1rem rgb(255, 255, 255);
+    background-color: rgb(237, 231, 215);
+    padding: 1rem;
+}
+
+img {
+  width: 14rem;
+  margin: 1rem;
+  box-shadow: 0.3rem 0.5rem 1rem rgba(0, 0, 0, 0.556);
+}
     margin: 1rem;
     padding: 3rem;
 }
