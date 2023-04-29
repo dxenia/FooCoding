@@ -110,11 +110,26 @@ experienceForm.addEventListener("submit", function (event) {
       position: updatedPosition,
       company: updatedCompany,
       year: updatedYear
-  })
+    })
   })
   .then(r => r.json())
   .then(result => console.log(result))
 })
+
+// Show / Hide editing panel (Admin)
+
+function hideForm() {
+  const admin = document.getElementById("admin");
+  const hiddenForm = document.getElementById("hiddenForm");
+
+  admin.addEventListener("change", function () {
+    if (this.checked === true) {
+      hiddenForm.style.display = "flex";
+    } else {
+      hiddenForm.style.display = "none";
+    }
+  });
+}
 
 // Contact form (Contact)
 
@@ -149,4 +164,3 @@ function validateEmail(email) {
   const validTemplate = /\S+@\S+\.\S+/;
   return validTemplate.test(email);
 }
-
