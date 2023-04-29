@@ -64,7 +64,7 @@
             with my boyfriend and cat. In my personal life I love drawing, knitting, and reading. My favourite genres are poetry and self-improvement. 
             I like to spend time in the nature, baking and cooking - Italian food is at the top of my list.</p>
             <h3 class="experience-heading">What have I been up to?</h3>
-          <p>My studies were always characterised by a holistic and immersive nature. As I completed my dissertation and paved my way into the 
+          <p>My studies were always characterized by a holistic and immersive nature. As I completed my dissertation and paved my way into the 
             professional sphere, I had the opportunity to grow what I had learned in theory through practice, 
             eventually challenging myself in various working environments. I took care of business development operations for several companies, 
             within tech (KPaaS), e-commerce and marketing. I also have a few years of experience working in hospitality, becoming a waitress during 
@@ -75,7 +75,7 @@
             <h3 class="experience-heading">My Work Experience</h3>
             <ul class="about-ul"> </ul>
           </div>
-          <form class="add-experience">
+          <form class="add-experience" id="hiddenForm">
             <p class="underline">Update work experience:</p>
             <label for="position" class="add-experience-label">Position:</label>
             <input type="text" id="position" name="position" class="add-experience-input" placeholder="Position" required>
@@ -119,10 +119,14 @@
   <script src="script.js"></script>
   <footer>
     <ul class="footer">
-      <li><a href="https://www.linkedin.com/in/dana-xenia-marasca/"><i class="fa-brands fa-linkedin"></i></a></li>
-      <li><a href="https://github.com/dxenia"><i class="fa-brands fa-github"></i></a></li>
+      <li><a target=”_blank” href="https://www.linkedin.com/in/dana-xenia-marasca/"><i class="fa-brands fa-linkedin"></i></a></li>
+      <li><a target=”_blank” href="https://github.com/dxenia"><i class="fa-brands fa-github"></i></a></li>
       <li><a href="mailto:marascadanaxenia@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
     </ul>
+    <div class="admin-box">
+      <label for="admin">Admin</label>
+      <input id="admin" name="admin" type="checkbox" onchange="hideForm()" checked >
+    </div>
   </footer>
 </body>
 </html>
