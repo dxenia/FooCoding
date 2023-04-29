@@ -313,7 +313,6 @@ a:hover, #repoGenerator > a:hover {
   padding: 1rem;
   background: #ffffff;
   gap: 0.2rem;
-  width: 50%;
 }
 
 .underline {
@@ -472,8 +471,9 @@ a:hover, #repoGenerator > a:hover {
     width: 40%;
   }
 
-
-}
+  .add-experience {
+    width: 60%;
+  }
 
 /*-----------LARGE SCREEN-----------*/
 
