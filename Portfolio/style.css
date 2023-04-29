@@ -99,7 +99,7 @@ button:hover {
 }
 
 #home {
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(55deg, #cc35ae 0%, #c1b4de 51%, #8defda 85%);
   display: flex;
   flex-direction: column;
