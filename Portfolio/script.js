@@ -133,34 +133,34 @@ function hideForm() {
 
 // Contact form (Contact)
 
-function validateForm() {
-  const name = document.forms["contactForm"]["name"].value;
-  const email = document.forms["contactForm"]["email"].value;
-  const number = document.forms["contactForm"]["number"].value;
-  const message = document.forms["contactForm"]["message"].value;
-  const error = "";
+// function validateForm() {
+//   const name = document.forms["contactForm"]["name"].value;
+//   const email = document.forms["contactForm"]["email"].value;
+//   const number = document.forms["contactForm"]["number"].value;
+//   const message = document.forms["contactForm"]["message"].value;
+//   const error = "";
 
-  if (name == "") {
-    error += "Please enter your name.";
-  }
+//   if (name == "") {
+//     error += "Please enter your name.";
+//   }
 
-  if (email == "") {
-    error += "Please enter your email.";
-  } else if (!validateEmail(email)) {
-    error += "Please enter a valid email address."
-  }
+//   if (email == "") {
+//     error += "Please enter your email.";
+//   } else if (!validateEmail(email)) {
+//     error += "Please enter a valid email address."
+//   }
 
-  if (number == "") {
-    error += "Please enter your phone number.";
-  }
+//   if (number == "") {
+//     error += "Please enter your phone number.";
+//   }
 
-  if (message == "") {
-    alert(error);
-    return false;
-  }
-}
+//   if (message == "") {
+//     alert(error);
+//     return false;
+//   }
+// }
 
-function validateEmail(email) {
-  const validTemplate = /\S+@\S+\.\S+/;
-  return validTemplate.test(email);
-}
+// function validateEmail(email) {
+//   const validTemplate = /\S+@\S+\.\S+/;
+//   return validTemplate.test(email);
+// }
