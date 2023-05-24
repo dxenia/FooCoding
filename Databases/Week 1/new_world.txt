@@ -46,4 +46,4 @@ SELECT country.Name FROM country INNER JOIN city ON country.Code = city.CountryC
 
 --->EXTRA EXTRA: List the cities from those countries, where the city population is > 5M.
 
-SELECT city.Name FROM city WHERE city.Population > 5000000;
+----IN PROGRESS----
