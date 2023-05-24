@@ -40,7 +40,6 @@ CREATE TABLE locations (
   `state` varchar(45) NOT NULL,
   `office_mng_no` int NOT NULL,
   PRIMARY KEY (`office_id`),
-  KEY `fk_office_mng_no_idx` (`office_mng_no`),
   CONSTRAINT `fk_emp_no` FOREIGN KEY (`office_mng_no`) REFERENCES `employee` (`emp_no`)
 );
 
