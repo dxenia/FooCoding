@@ -46,4 +46,8 @@ SELECT country.Name FROM country INNER JOIN city ON country.Code = city.CountryC
 
 --->EXTRA EXTRA: List the cities from those countries, where the city population is > 5M.
 
-Attempt(failed): SELECT Name FROM city WHERE Population > 5000000 IN (SELECT country.Name FROM country INNER JOIN city ON country.Code = city.CountryCode GROUP BY CountryCode HAVING COUNT(*) > 10 AND SUM(city.Population) > 50000000); // 4079 rows in set, 232 warnings (0.02 sec)
+SELECT Name FROM city WHERE Population > 5000000 AND CountryCode IN (SELECT country.code FROM country INNER JOIN city ON country.Code = city.CountryCode GROUP BY CountryCode HAVING COUNT(*) > 10 AND SUM(city.Population) > 50000000);
+
+--->EXTRA EXTRA EXTRA: List the largest country on each continent.
+
+
