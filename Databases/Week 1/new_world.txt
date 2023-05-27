@@ -50,4 +50,4 @@ SELECT Name FROM city WHERE Population > 5000000 AND CountryCode IN (SELECT coun
 
 --->EXTRA EXTRA EXTRA: List the largest country on each continent.
 
-
+SELECT Name FROM country WHERE Continent != 'Antarctica' AND SurfaceArea IN (SELECT MAX(SurfaceArea) FROM country GROUP BY Continent);
