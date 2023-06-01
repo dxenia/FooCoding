@@ -1,0 +1,29 @@
+TASK 3: I want to get alerts when a country has >= 10 languages. 
+E.g. If a country X has 9 languages in the CountryLanguage table, and a user INSERTs one more row in the CountryLanguage table, then I should get an alert.
+
+--------------------------
+// Trigger 'insert_alert' SQL Code for creation and setup
+
+mysql> delimiter //
+mysql> CREATE TRIGGER insert_alert AFTER INSERT ON countrylanguage
+    -> FOR EACH ROW
+    -> BEGIN
+    -> IF (SELECT COUNT(language) FROM countrylanguage GROUP BY countrycode HAVING countrycode = NEW.countrycode) >= 10 THEN
+    -> SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'The country has 10 or more languages';
+    -> END IF;
+    -> END;// 
+    -> delimiter ;
+Query OK, 0 rows affected (0.00 sec)
+
+--------------------------
+// Testing the trigger:
+// I selected a countrycode that already had at least 9 or 10 languages assigned to it on the table.
+// I then proceeded to test INSERT.
+
+INSERT INTO countrylanguage (countrycode, language) VALUES 	
+('ZAF', 'English'), 
+('ZAF', 'Italian'), 
+('ZAF', 'French'), 
+('ZAF', 'Spanish');
+
+ERROR 1644 (45000): The country has 10 or more languages // Error message displayed.
