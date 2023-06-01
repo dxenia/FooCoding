@@ -5,7 +5,7 @@ const readline = require('readline');
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'thisisthePasswordforrootuser1995o7o9',
+  password: 'root',
   database: 'new_world'
 });
 
