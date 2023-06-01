@@ -124,7 +124,7 @@ If no, display FALSE.
 [User input: 'Italy']
 
 PREPARE statement_five 
-FROM "SELECT c2.name AS Matches
+FROM "SELECT c2.name
       FROM country c1
       INNER JOIN country c2 
       ON c1.code != c2.code
