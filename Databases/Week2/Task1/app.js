@@ -108,28 +108,28 @@ rl.question('Select one of the following options (To do so, press either 1, 2, 3
         });
         break;
       
-        case '4': // Fourth query
-          const queryFour = 'SELECT country.continent, COUNT(countrylanguage.language) FROM country INNER JOIN countrylanguage ON country.code = countrylanguage.countrycode GROUP BY country.continent';
-          connection.prepare(queryFour, (err, statement) => {
-            if (err) {
-              console.error(err);
-              rl.close();
-              return;
-            }
-            statement.execute((err, results) => {
-              if (err) {
-                console.error(err);
-                statement.close();
-                rl.close();
-                return;
-              } else {
-                console.log('List of all the continents with the number of languages spoken in each continent:', results);
-                statement.close();
-                rl.close();
-              }
-            });
-          })
-          break;
+       case '4': // Fourth query
+           const queryFour = 'SELECT country.continent, COUNT(countrylanguage.language) FROM country INNER JOIN countrylanguage ON country.code = countrylanguage.countrycode GROUP BY country.continent';
+           connection.prepare(queryFour, (err, statement) => {
+             if (err) {
+               console.error(err);
+               rl.close();
+               return;
+             }
+             statement.execute((err, results) => {
+               if (err) {
+                 console.error(err);
+                 statement.close();
+                 rl.close();
+                 return;
+               } else {
+                 console.log('List of all the continents with the number of languages spoken in each continent:', results);
+                 statement.close();
+                 rl.close();
+               }
+             });
+           })
+           break;
         
         case '5': // Fifth query
           rl.question("Select a country.", (value) => {
