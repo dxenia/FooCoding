@@ -109,7 +109,7 @@ rl.question('Select one of the following options (To do so, press either 1, 2, 3
         break;
       
        case '4': // Fourth query
-           const queryFour = 'SELECT country.continent, COUNT(countrylanguage.language) FROM country INNER JOIN countrylanguage ON country.code = countrylanguage.countrycode GROUP BY country.continent';
+           const queryFour = 'SELECT country.continent, COUNT(countrylanguage.language) AS languages_number FROM country INNER JOIN countrylanguage ON country.code = countrylanguage.countrycode GROUP BY country.continent';
            connection.prepare(queryFour, (err, statement) => {
              if (err) {
                console.error(err);
