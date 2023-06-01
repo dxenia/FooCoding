@@ -99,7 +99,7 @@ List all the continents with the number of languages spoken in each continent
 [No input]
 
 PREPARE statement_four 
-  FROM 'SELECT country.continent, COUNT(countrylanguage.language) FROM country 
+  FROM 'SELECT country.continent, COUNT(countrylanguage.language) AS languages_number FROM country 
   INNER JOIN countrylanguage ON country.code = countrylanguage.countrycode GROUP BY country.continent';
 EXECUTE statement_four;
 +---------------+---------------------------------+
