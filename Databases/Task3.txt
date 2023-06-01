@@ -25,5 +25,3 @@ INSERT INTO countrylanguage (countrycode, language) VALUES
 ('ZAF', 'Spanish');
 
 ERROR 1644 (45000): The country has 10 or more languages // Error message displayed.
-
-///////FIX!!!!!
