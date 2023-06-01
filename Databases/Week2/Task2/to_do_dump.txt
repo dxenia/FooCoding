@@ -1,0 +1,57 @@
+---------------'to_do' DATABASE DUMP---------------
+
+CREATE DATABASE  IF NOT EXISTS `to_do` 
+
+USE `to_do`;
+
+
+DROP TABLE IF EXISTS `tag`;
+
+CREATE TABLE `tag` (
+  `tag_id` int NOT NULL,
+  `category` varchar(100) NOT NULL,
+  PRIMARY KEY (`tag_id`)
+);
+
+
+DROP TABLE IF EXISTS `to_do_item`;
+
+CREATE TABLE `to_do_item` (
+  `item_id` int NOT NULL,
+  `tag_id` int DEFAULT NULL,
+  `list_id` int NOT NULL,
+  `task` varchar(100) NOT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `completion` tinyint(1) NOT NULL DEFAULT 0,
+  `reminder` datetime DEFAULT NULL,
+  PRIMARY KEY (`item_id`),
+  KEY `fk_list_id_idx` (`list_id`),
+  KEY `fk_tag_id_idx` (`tag_id`),
+  CONSTRAINT `fk_list_id` FOREIGN KEY (`list_id`) REFERENCES `to_do_list` (`list_id`),
+  CONSTRAINT `fk_tag_id` FOREIGN KEY (`tag_id`) REFERENCES `tag` (`tag_id`)
+);
+
+
+DROP TABLE IF EXISTS `to_do_list`;
+
+CREATE TABLE `to_do_list` (
+  `list_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `list_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`list_id`),
+  KEY `fk_user_id_idx` (`user_id`),
+  CONSTRAINT `fk_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
+);
+
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `user_id` int NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `username_UNIQUE` (`username`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+);
