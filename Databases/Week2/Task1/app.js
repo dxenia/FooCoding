@@ -58,7 +58,7 @@ rl.question('Select one of the following options (To do so, press either 1, 2, 3
    
       case '2': // Second query
         rl.question("Write a region in the world and press enter.", (value) => {
-          const queryTwo = 'SELECT countrylanguage.language FROM countrylanguage INNER JOIN country ON countrylanguage.countrycode = country.code WHERE country.region = ?';
+          const queryTwo = 'SELECT DISTINCT countrylanguage.language FROM countrylanguage INNER JOIN country ON countrylanguage.countrycode = country.code WHERE country.region = ?';
           connection.prepare(queryTwo, (err, statement) => {
             if (err) {
               console.error(err);
