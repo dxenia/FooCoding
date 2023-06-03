@@ -8,7 +8,7 @@ mysql> delimiter //
 mysql> CREATE TRIGGER insert_alert AFTER INSERT ON countrylanguage
     -> FOR EACH ROW
     -> BEGIN
-    -> IF (SELECT COUNT(language) FROM countrylanguage GROUP BY countrycode HAVING countrycode = NEW.countrycode) >= 10 THEN
+    -> IF (SELECT COUNT(1) FROM countrylanguage GROUP BY countrycode HAVING countrycode = NEW.countrycode) >= 10 THEN
     -> SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'The country has 10 or more languages';
     -> END IF;
     -> END;// 
