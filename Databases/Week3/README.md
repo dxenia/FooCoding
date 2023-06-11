@@ -15,6 +15,12 @@ This project was created with:
 
 To access this project you are going to need Node.js and MySQL installed on your laptop. To test the app you can use Postman, either as a website or as a VSCode extension.
 
+First of all, clone this repository using
+```
+git clone git@github.com:dxenia/FooCoding.git
+```
+To access this project you are going to need Node.js and MySQL installed on your laptop. To test the app you can use Postman, either as a website or as a VSCode extension.
+
 ### Setting up the database
 
 Use the dump file provided to create a clone of my database schema (see todo-dump.sql)
