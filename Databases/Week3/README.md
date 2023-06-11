@@ -17,7 +17,7 @@ To access this project you are going to need Node.js and MySQL installed on your
 
 ### Setting up the database
 
-Use the dump file provided to create a clone of my database schema.
+Use the dump file provided to create a clone of my database schema (see todo-dump.sql)
 
 ### Installation
 
