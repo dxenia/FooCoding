@@ -22,7 +22,7 @@ git clone git@github.com:dxenia/FooCoding.git
 
 ### Setting up the database
 
-Use the dump file provided to create a clone of my database schema (see todo-dump.sql)
+Use the dump file provided to create an exact copy of my schema (see todo-dump.sql)
 
 ### Installation
 
