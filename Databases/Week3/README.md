@@ -10,7 +10,8 @@ This project was created with:
 - Express.js
 - MySQL
 - readme.so
-  And tested using:
+  
+And tested using:
 - Postman
 
 To access this project you are going to need Node.js and MySQL installed on your laptop. To test the app you can use Postman, either as a website or as a VSCode extension.
