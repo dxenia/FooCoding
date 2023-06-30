@@ -3,9 +3,6 @@ import { stdin, stdout } from 'node:process';
 import axios from 'axios';
 import { argsHandler } from './utils/argsHandler.js';
 import { updatePost, updateUser } from './utils/updateResources.js';
-import { server } from '../src/app.js';
-
-server;
 
 const values = argsHandler();
 const baseURL = 'http://127.0.0.1:3000';
