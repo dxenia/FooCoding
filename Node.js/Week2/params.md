@@ -1,5 +1,5 @@
 
-## CLI Arguments
+## Command Line Parameters
 
 ### /users
 ```bash
